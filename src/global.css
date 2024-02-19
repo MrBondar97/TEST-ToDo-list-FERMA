@@ -1,0 +1,26 @@
+body {
+    background-color: white;
+}
+
+.Project_Heder {
+    width: 100px;
+    height: 150px;
+    background-color: blueviolet;
+}
+html, body {
+    height:  100%;
+    margin:  0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #root {
+    min-height:  100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Стили для подвала */
+  footer {
+    margin-top: auto;
+  }
