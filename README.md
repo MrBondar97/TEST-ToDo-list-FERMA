@@ -1,12 +1,6 @@
 #                                    TO-DO List
 ##                    Стек технологий: React, TypeScript Styled-Components.
 
-###       Настройка проекта:
-Использование create-react-app с шаблоном TypeScript для генерации структуры проекта: npx create-react-app todo-list —template typescript.
-Установка зависимостей: yarn add styled-components и типов для TypeScript: yarn add -D @types/styled-components.
-Настройка файла tsconfig.json для конфигурирования TypeScript
-
-
 ###       Использование StyledComponents:
 Создание стилизованных компонентов с помощью styled-components для      стилизации элементов интерфейса.
 Определение типов для пропсов стилизованных компонентов с использованием TypeScript
@@ -17,6 +11,7 @@
 Маркировка выполненных задач
 Удаление задач из списка
 Редактирование существующих задач
+Работа с LocalStorage
 
 ###       Состояние приложения
 Определение типов для пропсов и состояний компонентов
