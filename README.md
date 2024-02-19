@@ -1,5 +1,5 @@
 # TO-DO List
-# Стек технологий: React, TypeScript Styled-Components.
+# Стек технологий: React, TypeScript, Styled-Components.
 
 ## Использование StyledComponents:
 ###### 1. Создание стилизованных компонентов с помощью styled-components для      стилизации элементов интерфейса.
