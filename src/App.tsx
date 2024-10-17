@@ -1,12 +1,11 @@
 import './global.css';
 import { Content } from "./Componets/Content/Content";
 import { Header } from "./Componets/Header/Header"
-import { Footer } from "./Componets/Footer/Footer"
+import { BodyApp } from './Componets/Content/content.styled';
 
 export const App = () => (
-    <div className="App">
+    <BodyApp className="App">
       <Header />
       <Content />
-      <Footer />
-    </div>
+    </BodyApp>
 )

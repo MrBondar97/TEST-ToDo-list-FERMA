@@ -1,59 +1,35 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 
 export const SHeader = styled.header`
     width:  100%;
-    padding:  0; // Убираем отступы слева и справа
-    height:  100px;
+    padding:  0px;
+    height:  226px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background-color: #42c3ebc2;
-`;
+    caret-color: transparent;
+
+    @media (max-width: 375px) {
+      padding: 5px;
+      height: 24px;
+  }
+`
+
 export const ProjectHeader = styled.div`
-  display: inline-block;
-    text-align: center; // Добавляем центрирование текста
-    & span {
-        color: red;
-        margin-right:  5px;
-        font-size:  70px; // Устанавливаем размер шрифта
-    }
-    & span:nth-child(2) {
-        color: blue;
-        margin-right:  5px;
-        font-size:  70px; // Устанавливаем размер шрифта
-    }
-    & span:nth-child(3) {
-        color: yellow;
-        font-size:  50px; // Устанавливаем размер шрифта
-    }
-`;
-const rotate = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
+    width: 525px;
+    height: 96px;
+    text-align: center;
+    color: #30324B;
+    font-size: 96px;
+    line-height: 96px;
+    font-family: 'Muller', sans-serif;
 
-export const TodoListIcon = styled.div`
-  position: absolute;
-  right:  20px;
-  top:  10%;
-  transform: translateY(-50%);
-  animation: ${rotate}  2s linear infinite;
-  color: black;
-`;
-
-export const SaveButton = styled.button`
-  background-color: green;
-  color: white;
-  border: none;
-  padding:  10px  20px;
-  margin:  10px;
-  cursor: pointer;
-  &:disabled {
-    background-color: grey;
+    @media (max-width: 375px) {
+      font-size: 24px;
+      text-align: center;
+      justify-content: center;
+      caret-color: transparent;
+      color: #30324B;
+      font-family: 'Muller', sans-serif; 
   }
-`;
+`

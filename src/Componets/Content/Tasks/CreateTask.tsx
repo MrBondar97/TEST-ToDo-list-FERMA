@@ -1,39 +1,38 @@
-import { Tasks } from "../Content"
-import { SAddTask, SInput, ButtonDivClass, SButton } from "../content.styled"
+import { ChangeEvent, useCallback, useState } from "react"
+import { SAddTask, AddButton, AddingTask } from "../content.styled"
 
 interface CreateTaskProps {
-    isButtonDisabled: boolean
     handleTitleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
-    handleDescriptionChange: (event: React.ChangeEvent<HTMLInputElement>) => void
     handleAddTask: () => void
-    save: Tasks
-  }
+}
 
-export const CreateTask: React.FC<CreateTaskProps> = ({
-    isButtonDisabled,
+  const COLOR_ICONS = '#30324B'
+
+  export const CreateTask: React.FC<CreateTaskProps> = ({
     handleTitleChange,
-    handleDescriptionChange,
     handleAddTask,
-    save,
 }) => {
+    const [taskTitle, setTaskTitle] = useState("")
+
+    const handleInputChange = useCallback((event: ChangeEvent<HTMLInputElement>) => {
+        setTaskTitle(event.target.value)
+        handleTitleChange(event)
+    }, [handleTitleChange])
+    // TODO Типизировать
+    const handleAddTaskClick = useCallback((e: any) => {
+        e.stopPropagation()
+        handleAddTask()
+        setTaskTitle("")
+    }, [handleAddTask])
+
     return(
         <SAddTask>
-            <SInput
-                placeholder='Заголовок'
-                onChange={handleTitleChange}
-                value={save.title}
-                name='title'
-            />
-            <SInput
-                placeholder='Описание'
-                onChange={handleDescriptionChange}
-                value={save.description}
-                name='description'
-            />
-            <ButtonDivClass>
-            <SButton  onClick={handleAddTask} disabled={isButtonDisabled}>
-                Добавить
-            </SButton>
-            </ButtonDivClass>
+            <AddingTask                     
+              placeholder="Создать задачу"
+              onChange={handleInputChange}
+              value={taskTitle} 
+            /> 
+            <AddButton color={COLOR_ICONS} onClick={handleAddTaskClick} />
         </SAddTask>
-    )}
+    )
+}

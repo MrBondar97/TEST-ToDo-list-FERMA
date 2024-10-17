@@ -1,5 +1,8 @@
 body {
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Project_Heder {
@@ -7,6 +10,7 @@ body {
     height: 150px;
     background-color: blueviolet;
 }
+
 html, body {
     height:  100%;
     margin:  0;
@@ -19,8 +23,7 @@ html, body {
     display: flex;
     flex-direction: column;
   }
-  
-  /* Стили для подвала */
+
   footer {
     margin-top: auto;
   }

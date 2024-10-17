@@ -5,15 +5,9 @@ interface TasksListProps {
     remainingTasksCount: number
 }
 
-export const TasksList:React.FC<TasksListProps> = ({taskElements, remainingTasksCount}) => { 
-
-    return (
-        <STasks>
-          <RemainingTasks>
-            Количество невыполненных задач:
-            <span> </span>
-             {remainingTasksCount}
-          </RemainingTasks>
-          {taskElements} 
-        </STasks>
-    )}
+export const TasksList:React.FC<TasksListProps> = ({ taskElements }) => (
+    <STasks>
+        <RemainingTasks />
+        {taskElements} 
+    </STasks>
+)
